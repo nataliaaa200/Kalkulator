@@ -7,10 +7,10 @@ namespace Kalkulator
         private string operacja;
         private bool czyNowaLiczba = true;
 
-        public System.Windows.Forms.TextBox textBox1; // Dodaj tê liniê
+        public System.Windows.Forms.TextBox textBox1; 
         public Form1()
         {
-            InitializeComponent(); // To jest bardzo wa¿ne! Wywo³uje inicjalizacjê formularza
+            InitializeComponent();
         }
 
         private void WprowadŸCyfrê(string cyfra)
@@ -126,7 +126,7 @@ namespace Kalkulator
                 }
 
                 textBox1.Text = wynik.ToString().Replace(".", ",");
-                czyNowaLiczba = true; // Ustaw flagê na true po wykonaniu operacji
+                czyNowaLiczba = true; 
                 pierwszaLiczba = wynik;
                 operacja = "";
             }
@@ -154,17 +154,17 @@ namespace Kalkulator
 
         private void kropka_Click(object sender, EventArgs e)
         {
-            if (!textBox1.Text.Contains(",")) // SprawdŸ, czy ju¿ nie ma przecinka
+            if (!textBox1.Text.Contains(",")) 
             {
                 if (string.IsNullOrEmpty(textBox1.Text) || textBox1.Text == "0")
                 {
-                    textBox1.Text = "0,"; // Dodaj "0," jeœli pole jest puste lub zawiera tylko zero
+                    textBox1.Text = "0,"; 
                 }
                 else
                 {
-                    textBox1.Text += ","; // Dodaj przecinek na koñcu
+                    textBox1.Text += ","; 
                 }
-                czyNowaLiczba = false; // Ustaw flagê, ¿e to nie jest nowa liczba
+                czyNowaLiczba = false; 
             }
         
         }
